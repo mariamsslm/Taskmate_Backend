@@ -1,5 +1,6 @@
 import Task from "../models/task.js";
 import Categorie from "../models/categorie.js";
+import mongoose from "mongoose";
 
 // create new task
 export const createTask = async (req, res) => {
@@ -113,3 +114,11 @@ export const getAllTask = async (req, res) => {
     res.status(500).json({ message: "server error" });
   }
 };
+
+// get all tasks for one categories for same person
+
+
+
+
+
+

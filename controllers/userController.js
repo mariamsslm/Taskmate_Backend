@@ -113,6 +113,21 @@ export const deleteUserById = async (req, res) => {
   }
 };
 
+//get all users
+export const getAllUsers =async(req,res)=>{
+  try{
+    const getUsers = await User.find()
+    if(!getUsers){
+      return res.status(404).json({nessage:"not users"})
+    }
+    return res.status(200).json(getUsers)
+  }
+  catch(error){
+console.error(error)
+res.status(500).json({error:"Server error"})
+  }
+}
+
 
 
 
